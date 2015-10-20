@@ -7,6 +7,8 @@
 
 As of `v5.8.0`, CodeMirror ships with [NSIS support][2]. This is merely the standalone version of the very same mode.
 
+If you're using Adobe Brackets, you can install [NSIS mode][3] with Extension Manager!
+
 ## Installation
 
 1. Download the JavaScript file and place it into `mode/file`
@@ -22,6 +24,7 @@ You are welcome support this project using [Flattr][5] or Bitcoin `17CXJuPsmhuTz
 
 [1]: http://codemirror.net/
 [2]: http://codemirror.net/mode/nsis/
-[3]: http://codemirror.net/doc/
-[4]: https://opensource.org/licenses/MIT
-[5]: https://flattr.com/submit/auto?user_id=idleberg&url=https://github.com/idleberg/codemirror-nsis
+[3]: https://github.com/idleberg/codemirror-nsis
+[4]: http://codemirror.net/doc/
+[5]: https://opensource.org/licenses/MIT
+[6]: https://flattr.com/submit/auto?user_id=idleberg&url=https://github.com/idleberg/codemirror-nsis
