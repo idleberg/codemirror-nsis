@@ -5,7 +5,7 @@
 [![David](https://img.shields.io/david/dev/idleberg/codemirror-nsis.svg?style=flat-square)](https://david-dm.org/idleberg/codemirror-nsis#info=devDependencies)
 [![Travis CI](https://img.shields.io/travis/idleberg/codemirror-nsis.svg?style=flat-square)](https://travis-ci.org/idleberg/codemirror-nsis)
 
-Standalone NSIS mode for [CodeMirror][1]. As of v5.8.0, CodeMirror ships with [NSIS support][2].
+As of `v5.8.0`, CodeMirror ships with [NSIS support][2]. This is merely the standalone version of the very same mode.
 
 ## Installation
 
