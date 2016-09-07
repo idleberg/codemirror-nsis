@@ -24,7 +24,7 @@ You are welcome support this project using [Flattr][5] or Bitcoin `17CXJuPsmhuTz
 
 [1]: http://codemirror.net/
 [2]: http://codemirror.net/mode/nsis/
-[3]: https://github.com/idleberg/codemirror-nsis
+[3]: https://github.com/idleberg/brackets-nsis-mode
 [4]: http://codemirror.net/doc/
 [5]: https://opensource.org/licenses/MIT
 [6]: https://flattr.com/submit/auto?user_id=idleberg&url=https://github.com/idleberg/codemirror-nsis
