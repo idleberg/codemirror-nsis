@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Nullsoft Scriptable Install System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../dist/js/jquery.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../dist/css/nsisweb.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/theme/railscasts.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/addon/mode/simple.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/addon/selection/active-line.min.js"></script>
+    <script src="nsis.js"></script>
+    <!-- <link rel="shortcut icon" href="../dist/ico/favicon.ico" /> -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../dist/ico/iphone.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../dist/ico/iphone@2x.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../dist/ico/ipad.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../dist/ico/ipad@2x.png" />
+    <meta name="msapplication-TileColor" content="#9e90aa" />
+    <meta name="msapplication-TileImage" content="../dist/img/nsis-web.png" />
+    <style type="text/css" media="screen">
+        .CodeMirror { min-height: 540px; z-index:0; font-family: "Fira Mono", "Fira Mono OT";font-size:14px;text-rendering: optimizeSpeed;}
+    </style>    
+</head>
+
+<body>
+    <header role="banner">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">NSIS</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Documentation</a>
+                                <li><a href="http://forums.winamp.com/forumdisplay.php?forumid=65">Forum</a>
+                                    <li><a href="http://nsis.sf.net/">Wiki</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Links <span class="caret"></span></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="http://nsis-dev.tumblr.com/">Blog</a>
+                                            </li>
+                                            <li><a href="#">History</a>
+                                            </li>
+                                            <li><a href="#">Issues</a>
+                                            </li>
+                                            <li><a href="#">Feature Requests</a>
+                                            </li>
+                                            <li><a href="#">Contact</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="https://github.com/NSIS-Dev">GitHub</a>
+                                            </li>
+                                            <li><a href="http://sourceforge.net/projects/nsis">SourceForge</a>
+                                            </li>
+                                            <li><a href="http://twitter.com/nsis_tweets">Twitter</a>
+                                            </li>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <form id="search-form" class="navbar-form navbar-left" role="search" method="get" action="http://duckduckgo.com/">
+                                    <div class="form-group">
+                                        <input type="hidden" name="sites" value="nsis.sourceforge.net"/>
+                                        <input type="hidden" name="ka" value="h"/>
+                                        <input type="hidden" name="k7" value="#f5f4f3"/>
+                                        <input type="hidden" name="kj" value="#443a47"/>
+                                        <input type="hidden" name="ky" value="#00ff00"/>
+                                        <input type="hidden" name="kx" value="b"/>
+                                        <input type="hidden" name="kt" value="Segoe UI"/>
+
+                                        <input id="search-input" type="text" name="q" class="form-control" placeholder="Search" autofocus>
+                                    </div>
+                                </form>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+
+        <div class="container bg-white">
+            <div class="row">
+                <h1>CodeMirror Demo</h1>
+                
+                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 ">
+
+                    <div class="btn-group" role="group" aria-label="Vertical button group">
+                      <div class="btn-group " role="group">
+                        <button id="btnGroupVerticalDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Example scripts
+                          <span class="caret"></span>
+                      </button>
+                      <ul id="examples" class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
+                          <!-- <li><a href="#">Dropdown link</a></li> -->
+                      </ul>
+                  </div>
+
+                    
+
+                  <button type="button" class="btn btn-default">Save</button>
+                  
+                  </div>
+                    <textarea id="editor">
+; example1.nsi
+;
+; This script is perhaps one of the simplest NSIs you can make. All of the
+; optional settings are left to their default settings. The installer simply 
+; prompts the user asking them where to install, and drops a copy of example1.nsi
+; there. 
+
+;--------------------------------
+
+; The name of the installer
+Name "Example1"
+
+; The file to write
+OutFile "example1.exe"
+
+; The default installation directory
+InstallDir $DESKTOP\Example1
+
+; Request application privileges for Windows Vista
+RequestExecutionLevel user
+
+;--------------------------------
+
+; Pages
+
+Page directory
+Page instfiles
+
+;--------------------------------
+
+; The stuff to install
+Section "" ;No components page, name is not important
+
+  ; Set output path to the installation directory.
+  SetOutPath $INSTDIR
+  
+  ; Put file there
+  File example1.nsi
+  
+SectionEnd ; end the section
+
+</textarea>
+
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script src="../dist/js/nsisweb.min.js"></script>
+  <script type="text/javascript">
+    CodeMirror.fromTextArea(document.getElementById("editor"), {
+        lineNumbers: true,
+        mode:  "nsis",
+        theme: "railscasts",
+        autofocus: true,
+        styleActiveLine: true
+    });
+
+    var useStorage = function() {
+      try {
+        return 'localStorage' in window && window.localStorage !== null;
+      } catch (e) {
+        return false;
+      }
+    };
+
+    var loadExample = function(example) {
+      try {
+        val = localStorage.getItem(example.name);
+          console.log(val);
+          // if (val === null) {
+            $.getJSON(example.url, function(script) {
+                console.log(example.name);
+                console.log(script);
+                localStorage.setItem(example.name, script);
+            });
+            
+          // }
+          return true;
+      } catch (e) {
+        return false;
+      }
+    };
+
+    $(function() {
+        
+        var examples;
+        $.getJSON('examples.json', function(json) {
+          
+          // console.log(json);
+
+          for ( var i = 0, l = json.length; i < l; i++ ) {
+              var ji = json[i];
+              console.log( ji );
+              $('#examples').append('<li><a href="#" rel="'+ji.url+'">'+ji.name+'</a></li>');
+
+              loadExample(ji);
+
+              // for (var i = 0; i < localStorage.length; i++){
+              //   var key = localStorage.key(i),
+              //   val = localStorage.getItem(key);
+              //   css[key] = val;
+              //   if (debug === true) console.log('\t'+key+'='+val);
+              // }
+          }
+
+          $("#examples li a").click(function() {
+              var selection = $(this).attr("rel");
+              console.log(selection);
+
+              $.getJSON("../"+selection, function(script) {
+                  console.log(script);
+                  // localStorage.setItem(example.name, script);f
+              });
+          });
+
+        });
+
+    });
+</script>
+</body>
+
+</html>
