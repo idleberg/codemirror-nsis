@@ -1,8 +1,0 @@
-[
-    { "name": "bigtest.nsi", "url": "Examples/bigtest.nsi" },
-    { "name": "example1.nsi", "url": "Examples/example1.nsi" },
-    { "name": "example2.nsi", "url": "Examples/example2.nsi" },
-    { "name": "gfx.nsi", "url": "Examples/gfx.nsi" },
-    { "name": "one-section.nsi", "url": "Examples/one-section.nsi" },
-    { "name": "silent.nsi", "url": "Examples/silent.nsi" }
-]
