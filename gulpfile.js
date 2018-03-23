@@ -1,16 +1,21 @@
 var gulp = require('gulp');
 var debug = require('gulp-debug');
-var jshint = require('gulp-jshint');
-
-// Tasks
-gulp.task('lint', ['jshint']);
+var eslint = require('gulp-eslint');
 
 // Exclude node_modules
 var self = '!node_modules/**/*';
 
-// Lint JavaScript files
-gulp.task('jshint', function() {
-    return gulp.src(['./**/*.js', self])
-        .pipe(debug({title: 'jshint:'}))
-        .pipe(jshint())
+gulp.task('eslint', (done) => {
+  gulp.src(['./*.js', self])
+    .pipe(debug({title: 'eslint:'}))
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+
+  done();
 });
+
+// Tasks
+gulp.task('lint', gulp.series('eslint', (done) => {
+  done();
+}));
