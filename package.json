@@ -25,5 +25,8 @@
   },
   "scripts": {
     "test": "gulp lint"
+  },
+  "dependencies": {
+    "codemirror": "^5.38.0"
   }
 }
