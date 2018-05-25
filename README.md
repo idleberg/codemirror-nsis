@@ -11,8 +11,7 @@ If you're using Adobe Brackets, you can install [NSIS mode][2] with Extension Ma
 
 ## Installation
 
-1. Download the JavaScript file and place it into `mode/file`
-2. Refer to the [CodeMirror Manual][3] for build instructions
+`yarn add codemirror-nsis || npm install codemirror-nsis`
 
 ## License
 
