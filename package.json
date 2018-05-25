@@ -4,6 +4,10 @@
   "version": "0.8.2",
   "author": "Jan T. Sott",
   "license": "MIT",
+  "scripts": {
+    "precommit": "npm test",
+    "test": "gulp lint"
+  },
   "keywords": [
     "codemirror",
     "mode",
@@ -13,20 +17,18 @@
   ],
   "homepage": "https://github.com/idleberg/codemirror-nsis",
   "repository": "https://github.com/idleberg/codemirror-nsis",
+  "dependencies": {
+    "codemirror": "^5.38.0"
+  },
   "devDependencies": {
-    "babel-eslint": "^7.2.3",
+    "babel-eslint": "^8.2.3",
     "eslint": "^4.14.0",
     "gulp": "^4.0.0",
-    "gulp-debug": "^3.2.0",
-    "gulp-eslint": "^4.0.1"
+    "gulp-debug": "^4.0.0",
+    "gulp-eslint": "^4.0.1",
+    "husky": "^0.14.3"
   },
   "eslintConfig": {
     "parser": "babel-eslint"
-  },
-  "scripts": {
-    "test": "gulp lint"
-  },
-  "dependencies": {
-    "codemirror": "^5.38.0"
   }
 }
