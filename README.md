@@ -1,9 +1,9 @@
 # codemirror-nsis
 
-[![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
-[![GitHub](https://img.shields.io/github/release/idleberg/codemirror-nsis.svg?style=flat-square)](https://github.com/idleberg/codemirror-nsis/releases)
-[![David](https://img.shields.io/david/dev/idleberg/codemirror-nsis.svg?style=flat-square)](https://david-dm.org/idleberg/codemirror-nsis?type=dev)
-[![Travis CI](https://img.shields.io/travis/idleberg/codemirror-nsis.svg?style=flat-square)](https://travis-ci.org/idleberg/codemirror-nsis)
+[![npm](https://flat.badgen.net/npm/license/codemirror-nsis)](https://www.npmjs.org/package/codemirror-nsis)
+[![npm](https://flat.badgen.net/npm/v/codemirror-nsis)](https://www.npmjs.org/package/codemirror-nsis)
+[![Travis CI](https://flat.badgen.net/travis/idleberg/codemirror-nsis)](https://travis-ci.org/idleberg/codemirror-nsis)
+[![David](https://flat.badgen.net/david/dev/idleberg/codemirror-nsis)](https://david-dm.org/idleberg/codemirror-nsis?type=dev)
 
 As of `v5.8.0`, CodeMirror ships with [NSIS support][1]. This is merely the standalone version of the very same mode.
 
