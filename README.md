@@ -19,7 +19,7 @@ Released under [The MIT License][4].
 
 ## Donate
 
-You are welcome support this project using [Flattr][5] or Bitcoin `17CXJuPsmhuTzFV2k4RKYwpEHVjskJktRd`
+You are welcome to support this project using [Flattr][5] or Bitcoin `17CXJuPsmhuTzFV2k4RKYwpEHVjskJktRd`
 
 [1]: http://codemirror.net/mode/nsis/
 [2]: https://github.com/idleberg/brackets-nsis-mode
