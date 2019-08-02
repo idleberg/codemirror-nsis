@@ -3,7 +3,6 @@
 [![npm](https://flat.badgen.net/npm/license/codemirror-nsis)](https://www.npmjs.org/package/codemirror-nsis)
 [![npm](https://flat.badgen.net/npm/v/codemirror-nsis)](https://www.npmjs.org/package/codemirror-nsis)
 [![Travis CI](https://flat.badgen.net/travis/idleberg/codemirror-nsis)](https://travis-ci.org/idleberg/codemirror-nsis)
-[![David](https://flat.badgen.net/david/dev/idleberg/codemirror-nsis)](https://david-dm.org/idleberg/codemirror-nsis?type=dev)
 
 As of `v5.8.0`, CodeMirror ships with [NSIS support][1]. This is merely the standalone version of the very same mode.
 
