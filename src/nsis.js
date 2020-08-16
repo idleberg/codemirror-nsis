@@ -1,5 +1,15 @@
 /*! codemirror-nsis | MIT License | github.com/idleberg/codemirror-nsis */
 
+(function(mod) {
+  if (typeof exports == "object" && typeof module == "object") // CommonJS
+    mod(require("codemirror"), require("codemirror/addon/mode/simple"));
+  else if (typeof define == "function" && define.amd) // AMD
+    define(["codemirror", "codemirror/addon/mode/simple"], mod);
+  else // Plain browser env
+    mod(CodeMirror);
+})(function(CodeMirror) {
+"use strict";
+
 CodeMirror.defineSimpleMode("nsis",{
   start:[
     // Numbers
@@ -79,3 +89,4 @@ CodeMirror.defineSimpleMode("nsis",{
 });
 
 CodeMirror.defineMIME("text/x-nsis", "nsis");
+});
