@@ -11,7 +11,8 @@
     "fix": "eslint --fix ./src",
     "lint": "eslint ./src",
     "start": "rollup --watch --config",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "prepare": "husky install"
   },
   "keywords": [
     "codemirror",
@@ -30,13 +31,13 @@
     "@typescript-eslint/parser": "^3.9.0",
     "eslint": "^7.6.0",
     "eslint-config-recommended": "^4.1.0",
-    "husky": "^4.2.5",
+    "eslint-plugin-json": "^3.1.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.2.0",
     "rollup": "^2.24.0",
     "rollup-plugin-terser": "^7.0.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test"
-    }
+  "lint-staged": {
+    "*.(js|json)": "eslint --cache --fix"
   }
 }
