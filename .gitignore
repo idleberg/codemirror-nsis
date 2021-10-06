@@ -1,7 +1,14 @@
-*.zip
+# Package Managers
 bower_components/
 node_modules/
-npm-debug.log
-todo.md
+npm-debug.log*
 vendor/
 yarn.lock
+
+# Development
+.eslintcache
+*.map
+
+# Project specific
+lib/*LICENSE.txt
+todo.md

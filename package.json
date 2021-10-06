@@ -5,6 +5,10 @@
   "author": "Jan T. Sott",
   "license": "MIT",
   "main": "dist/nsis.js",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "build": "rollup --config",
     "dev": "npm run start",
