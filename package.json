@@ -34,7 +34,7 @@
     "nullsoft",
     "syntax highlighter"
   ],
-  "homepage": "https://github.com/idleberg/codemirror-nsis",
+  "homepage": "http://idleberg.github.io/codemirror-nsis/",
   "repository": "https://github.com/idleberg/codemirror-nsis",
   "dependencies": {
     "codemirror": ">=5.63 <6"
