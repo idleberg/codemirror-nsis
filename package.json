@@ -1,6 +1,6 @@
 {
   "name": "codemirror-nsis",
-  "description": "NSIS support for the CodeMirror syntax highlighter",
+  "description": "NSIS mode for CodeMirror 5",
   "version": "0.8.5",
   "author": "Jan T. Sott",
   "license": "MIT",
