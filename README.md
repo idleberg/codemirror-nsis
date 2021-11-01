@@ -9,8 +9,6 @@ A mode for [NSIS](https://nsis.sourceforge.io/) to use with [CodeMirror](https:/
 
 [Demo Time](https://idleberg.github.io/codemirror-nsis/) 🙌
 
-**Note:** As of `v5.8.0`, CodeMirror already comes with NSIS support built in
-
 ## Installation
 
 Use your preferred [Node](https://nodejs.org) package manager to install the mode
