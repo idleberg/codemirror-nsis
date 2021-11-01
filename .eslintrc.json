@@ -1,0 +1,24 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:json/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module"
+    },
+    "rules": {
+      "curly": 2,
+      "no-var": 2,
+      "object-curly-newline": 2
+    },
+    "ignorePatterns": [
+      "bower_components",
+      "dist",
+      "node_modules"
+  ]
+}

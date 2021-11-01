@@ -1,20 +1,16 @@
-(function (factory) {
-  typeof define === 'function' && define.amd ? define(factory) :
-  factory();
-}((function () { 'use strict';
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('codemirror')) :
+  typeof define === 'function' && define.amd ? define(['codemirror'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.CodeMirror));
+})(this, (function (CodeMirror) { 'use strict';
+
+  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+  var CodeMirror__default = /*#__PURE__*/_interopDefaultLegacy(CodeMirror);
 
   /*! codemirror-nsis | MIT License | github.com/idleberg/codemirror-nsis */
 
-  (function(mod) {
-    if (typeof exports == "object" && typeof module == "object") // CommonJS
-      mod(require("codemirror"), require("codemirror/addon/mode/simple"));
-    else if (typeof define == "function" && define.amd) // AMD
-      define(["codemirror", "codemirror/addon/mode/simple"], mod);
-    else // Plain browser env
-      mod(CodeMirror);
-  })(function(CodeMirror) {
-
-  CodeMirror.defineSimpleMode("nsis", {
+  CodeMirror__default["default"].defineSimpleMode("nsis", {
     start: [
       // Numbers
       { regex: /(?:[+-]?)(?:0x[\d,a-f]+)|(?:0o[0-7]+)|(?:0b[0,1]+)|(?:\d+.?\d*)/, token: "number" },
@@ -92,7 +88,6 @@
     },
   });
 
-  CodeMirror.defineMIME("text/x-nsis", "nsis");
-  });
+  CodeMirror__default["default"].defineMIME("text/x-nsis", "nsis");
 
-})));
+}));
