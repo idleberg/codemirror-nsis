@@ -24,6 +24,45 @@ Alternatively, you can clone this repository
 ```sh
 $ git clone https://github.com/idleberg/codemirror-nsis
 ```
+
+## Usage
+
+Example usage on website
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import CodeMirror styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5/lib/codemirror.min.css">
+<head>
+</head>
+<body>
+  <!-- Add Textarea -->
+  <textarea id="editor"></textarea>
+
+  <!-- Import CodeMirror library -->
+  <script defer src="https://cdn.jsdelivr.net/npm/codemirror@5/lib/codemirror.min.js"></script>
+
+  <!-- Import NSIS mode -->
+  <script defer src="https://cdn.jsdelivr.net/npm/idleberg/codemirror-nsis@latest/dist/nsis.min.js"></script>
+
+  <!-- Initialize CodeMirror -->
+  <script type="text/javascript">
+    const editor = document.getElementById('editor');
+    const options = {
+      lineNumbers: true,
+      mode: 'nsis'
+    };
+
+    const cm = CodeMirror.fromTextArea(editor, options);
+  </script>
+</body>
+</html>
+```
+
+**Note**: If you want to load CodeMirror from a CDN, make sure to specify a specific version for better performance – the example above doesn't to keep it simple.
+
 ## License
 
 Released under [The MIT License](http://opensource.org/licenses/MIT)
