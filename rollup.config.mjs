@@ -20,15 +20,19 @@ export default [
     input: 'src/nsis.js',
     output: {
       ...output,
-      file: 'dist/nsis.js',
+      file: 'dist/nsis.cjs'
     },
-    plugins: plugins
+    plugins: [
+      ...plugins,
+      terser()
+    ]
   },
   {
     input: 'src/nsis.js',
     output: {
       ...output,
-      file: 'dist/nsis.min.js'
+      format: 'esm',
+      file: 'dist/nsis.mjs'
     },
     plugins: [
       ...plugins,

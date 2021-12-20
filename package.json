@@ -4,7 +4,10 @@
   "version": "0.9.0",
   "author": "Jan T. Sott",
   "license": "MIT",
-  "main": "dist/nsis.js",
+  "exports": {
+    "import": "./dist/nsis.mjs",
+    "require": "./dist/nsis.cjs"
+  },
   "files:": [
     "dist",
     "LICENSE",
