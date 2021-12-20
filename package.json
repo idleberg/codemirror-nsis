@@ -5,8 +5,8 @@
   "author": "Jan T. Sott",
   "license": "MIT",
   "exports": {
-    "import": "./dist/nsis.mjs",
-    "require": "./dist/nsis.cjs"
+    "import": "./dist/nsis.esm.js",
+    "require": "./dist/nsis.js"
   },
   "files:": [
     "dist",

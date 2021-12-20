@@ -20,7 +20,7 @@ export default [
     input: 'src/nsis.js',
     output: {
       ...output,
-      file: 'dist/nsis.cjs'
+      file: 'dist/nsis.js'
     },
     plugins: [
       ...plugins,
@@ -32,7 +32,7 @@ export default [
     output: {
       ...output,
       format: 'esm',
-      file: 'dist/nsis.mjs'
+      file: 'dist/nsis.esm.js'
     },
     plugins: [
       ...plugins,
