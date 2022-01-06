@@ -11,7 +11,7 @@
   "files:": [
     "dist",
     "LICENSE",
-    "README"
+    "README.md"
   ],
   "scripts": {
     "build:code": "rollup -c",
