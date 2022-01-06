@@ -1,6 +1,4 @@
 /*! codemirror-nsis | MIT License | github.com/idleberg/codemirror-nsis */
-import CodeMirror from "codemirror";
-
 CodeMirror.defineSimpleMode("nsis", {
   start: [
     // Numbers

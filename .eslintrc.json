@@ -16,6 +16,9 @@
       "no-var": 2,
       "object-curly-newline": 2
     },
+    "globals": {
+      "CodeMirror": true
+    },
     "ignorePatterns": [
       "bower_components",
       "dist",
