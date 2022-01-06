@@ -5,9 +5,10 @@ vendor/
 
 # package manager files
 npm-debug.log*
+package-lock.json
+shrinkwrap.yaml
 yarn-error.log
 yarn.lock
-shrinkwrap.yaml
 
 # development
 .eslintcache
