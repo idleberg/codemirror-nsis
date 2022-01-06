@@ -15,6 +15,8 @@ yarn-error.log
 .eslintcache
 .github/
 .husky/
+.stylelintrc.json
+rollup.config.mjs
 src/
 test/
 tsconfig.tsbuildinfo
@@ -23,6 +25,8 @@ tsconfig.tsbuildinfo
 test.js
 test.ts
 todo.md
+index.html
+dist/theme.min.css
 
 # files
 .gitignore
