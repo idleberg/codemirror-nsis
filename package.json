@@ -1,7 +1,7 @@
 {
   "name": "codemirror-nsis",
   "description": "NSIS mode for CodeMirror 5",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "author": "Jan T. Sott",
   "license": "MIT",
   "exports": {
