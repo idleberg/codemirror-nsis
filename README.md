@@ -43,7 +43,8 @@ Example usage on website
   <script defer src="https://cdn.jsdelivr.net/npm/codemirror@5/lib/codemirror.min.js"></script>
 
   <!-- Import NSIS mode -->
-  <script defer src="https://cdn.jsdelivr.net/npm/idleberg/codemirror-nsis@latest/dist/nsis.min.js"></script>
+  <script defer type="module" src="https://cdn.jsdelivr.net/npm/idleberg/codemirror-nsis@latest/dist/nsis.esm.js"></script>
+  <script defer type="nomodule" src="https://cdn.jsdelivr.net/npm/idleberg/codemirror-nsis@latest/dist/nsis.js"></script>
 
   <!-- Initialize CodeMirror -->
   <script type="text/javascript">
