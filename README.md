@@ -54,7 +54,7 @@ Example usage on website
       mode: 'nsis'
     };
 
-    const cm = CodeMirror.fromTextArea(editor, options);
+    CodeMirror.fromTextArea(editor, options);
   </script>
 </body>
 </html>
