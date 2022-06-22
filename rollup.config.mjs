@@ -2,41 +2,51 @@ import { terser } from "rollup-plugin-terser";
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 
-const output = {
-  format: 'umd',
-  globals: {
-    codemirror: 'CodeMirror'
-  },
-  name: "CodeMirrorNSIS"
+const globals = {
+  codemirror: 'CodeMirror'
 };
+
+const name = 'CodeMirrorNSIS';
 
 const plugins = [
   commonjs(),
-  json()
+  json(),
+  terser()
 ];
 
 export default [
   {
-    input: 'src/nsis.js',
-    output: {
-      ...output,
-      file: 'dist/nsis.js'
-    },
-    plugins: [
-      ...plugins,
-      terser()
-    ]
+    input: 'src/codemirror.js',
+    output: [
+      {
+        file: 'dist/codemirror-nsis.js',
+        format: 'umd',
+        globals: globals,
+        name: name
+      },
+      {
+        file: 'dist/codemirror-nsis.esm.js',
+        format: 'esm',
+        globals: globals,
+        name: name
+      }
+    ],
+    plugins: plugins
   },
   {
     input: 'src/nsis.js',
-    output: {
-      ...output,
-      format: 'esm',
-      file: 'dist/nsis.esm.js'
-    },
-    plugins: [
-      ...plugins,
-      terser()
-    ]
+    output: [
+      {
+        file: 'dist/nsis.cjs',
+        format: 'cjs',
+        globals: globals,
+      },
+      {
+        file: 'dist/nsis.mjs',
+        format: 'esm',
+        globals: globals
+      }
+    ],
+    plugins: plugins
   }
 ];

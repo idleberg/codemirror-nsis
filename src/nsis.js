@@ -1,5 +1,11 @@
-/*! codemirror-nsis | MIT License | github.com/idleberg/codemirror-nsis */
-CodeMirror.defineSimpleMode("nsis", {
+export const name = 'nsis';
+
+export const mime = {
+  type: '"text/x-nsis',
+  spec: 'nsis'
+};
+
+export const states = {
   start: [
     // Numbers
     {
@@ -172,7 +178,6 @@ CodeMirror.defineSimpleMode("nsis", {
     blockCommentStart: "/*",
     blockCommentEnd: "*/",
     lineComment: ["#", ";"],
-  },
-});
+  }
+};
 
-CodeMirror.defineMIME("text/x-nsis", "nsis");
