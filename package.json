@@ -5,8 +5,14 @@
   "author": "Jan T. Sott",
   "license": "MIT",
   "exports": {
-    "import": "./dist/codemirror-nsis.esm.js",
-    "require": "./dist/codemirror-nsis.js"
+    ".": {
+      "import": "./dist/codemirror-nsis.esm.js",
+      "require": "./dist/codemirror-nsis.js"
+    },
+    "mode": {
+      "import": "./dist/nsis-mode.esm.js",
+      "require": "./dist/nsis-mode.js"
+    }
   },
   "files:": [
     "dist",

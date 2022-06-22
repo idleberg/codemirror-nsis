@@ -37,12 +37,12 @@ export default [
     input: 'src/nsis.js',
     output: [
       {
-        file: 'dist/nsis.cjs',
+        file: 'dist/nsis-mode.js',
         format: 'cjs',
         globals: globals,
       },
       {
-        file: 'dist/nsis.mjs',
+        file: 'dist/nsis-mode.esm.js',
         format: 'esm',
         globals: globals
       }
