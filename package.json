@@ -9,7 +9,7 @@
       "import": "./dist/codemirror-nsis.esm.js",
       "require": "./dist/codemirror-nsis.js"
     },
-    "mode": {
+    "./mode": {
       "import": "./dist/nsis-mode.esm.js",
       "require": "./dist/nsis-mode.js"
     }
