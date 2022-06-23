@@ -31,6 +31,7 @@
     "lint:style": "stylelint ./src/theme.css",
     "lint": "npm-run-all --parallel lint:*",
     "prepare": "husky install",
+    "serve": "sirv -B ./",
     "start": "npm run watch",
     "test": "npm run lint",
     "watch:code": "rollup -w -c",
@@ -64,6 +65,7 @@
     "postcss-cli": "^9.1.0",
     "rollup": "^2.75.7",
     "rollup-plugin-terser": "^7.0.2",
+    "sirv-cli": "^2.0.2",
     "stylelint": "^14.9.1",
     "stylelint-config-recommended": "^6.0.0"
   },
