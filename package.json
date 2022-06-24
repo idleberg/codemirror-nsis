@@ -6,12 +6,12 @@
   "license": "MIT",
   "exports": {
     ".": {
-      "import": "./dist/codemirror-nsis.esm.js",
-      "require": "./dist/codemirror-nsis.js"
+      "import": "./dist/codemirror-nsis.mjs",
+      "require": "./dist/codemirror-nsis.cjs"
     },
     "./mode": {
-      "import": "./dist/nsis-mode.esm.js",
-      "require": "./dist/nsis-mode.js"
+      "import": "./dist/nsis-mode.mjs",
+      "require": "./dist/nsis-mode.cjs"
     }
   },
   "files:": [

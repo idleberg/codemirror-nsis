@@ -19,13 +19,13 @@ export default [
     input: 'src/codemirror.js',
     output: [
       {
-        file: 'dist/codemirror-nsis.js',
+        file: 'dist/codemirror-nsis.cjs',
         format: 'umd',
         globals: globals,
         name: name
       },
       {
-        file: 'dist/codemirror-nsis.esm.js',
+        file: 'dist/codemirror-nsis.mjs',
         format: 'esm',
         globals: globals,
         name: name
@@ -37,12 +37,12 @@ export default [
     input: 'src/nsis.js',
     output: [
       {
-        file: 'dist/nsis-mode.js',
+        file: 'dist/nsis-mode.cjs',
         format: 'cjs',
         globals: globals,
       },
       {
-        file: 'dist/nsis-mode.esm.js',
+        file: 'dist/nsis-mode.mjs',
         format: 'esm',
         globals: globals
       }

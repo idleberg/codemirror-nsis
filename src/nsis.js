@@ -1,7 +1,7 @@
 export const name = 'nsis';
 
 export const mime = {
-  type: '"text/x-nsis',
+  type: 'text/x-nsis',
   spec: 'nsis'
 };
 
