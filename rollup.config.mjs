@@ -29,6 +29,12 @@ export default [
         format: 'esm',
         globals: globals,
         name: name
+      },
+      {
+        file: 'dist/codemirror-nsis.js',
+        format: 'iife',
+        globals: globals,
+        name: name
       }
     ],
     plugins: plugins
