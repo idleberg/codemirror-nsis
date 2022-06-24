@@ -1,8 +1,8 @@
-export const name = 'nsis';
+export const name = "nsis";
 
 export const mime = {
-  type: 'text/x-nsis',
-  spec: 'nsis'
+  type: "text/x-nsis",
+  spec: "nsis"
 };
 
 export const states = {
