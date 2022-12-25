@@ -2,7 +2,7 @@
 
 [![npm](https://flat.badgen.net/npm/license/codemirror-nsis)](https://www.npmjs.org/package/codemirror-nsis)
 [![npm](https://flat.badgen.net/npm/v/codemirror-nsis)](https://www.npmjs.org/package/codemirror-nsis)
-[![CI](https://img.shields.io/github/workflow/status/idleberg/codemirror-nsis/CI?style=flat-square)](https://github.com/idleberg/codemirror-nsis/actions)
+[![CI](https://img.shields.io/github/actions/workflow/status/idleberg/codemirror-nsis/default.yml?style=flat-square)](https://github.com/idleberg/codemirror-nsis/actions)
 
 
 A mode for [NSIS](https://nsis.sourceforge.io/) to use with [CodeMirror](https://codemirror.net/), the versatile text editor implemented in JavaScript for the browser.
