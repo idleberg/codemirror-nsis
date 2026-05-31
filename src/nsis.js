@@ -29,7 +29,7 @@ export const states = {
 
 		// Compile Time Commands
 		{
-			regex: /^\s*(?:\!(addincludedir|addplugindir|appendfile|appendmemfile|assert|cd|define|delfile|echo|error|execute|finalize|getdllversion|gettlbversion|include|insertmacro|macro|macroend|macroundef|makensis|packhdr|pragma|searchparse|searchreplace|system|tempfile|undef|uninstfinalize|verbose|warning))\b/i,
+			regex: /^\s*(?:!(addincludedir|addplugindir|appendfile|appendmemfile|assert|cd|define|delfile|echo|error|execute|finalize|getdllversion|gettlbversion|include|insertmacro|macro|macroend|macroundef|makensis|packhdr|pragma|searchparse|searchreplace|system|tempfile|undef|uninstfinalize|verbose|warning))\b/i,
 			token: "keyword"
 		},
 
