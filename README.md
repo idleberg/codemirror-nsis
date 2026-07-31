@@ -1,7 +1,7 @@
 > [!IMPORTANT]  
 > This package has been renamed and is published under the new name [`@nsis/codemirror`](https://github.com/idleberg/nsis-org/tree/main/packages/codemirror).
->
-> # codemirror-nsis
+
+# codemirror-nsis
 
 [![npm](https://flat.badgen.net/npm/license/codemirror-nsis)](https://www.npmjs.org/package/codemirror-nsis)
 [![npm](https://flat.badgen.net/npm/v/codemirror-nsis)](https://www.npmjs.org/package/codemirror-nsis)
